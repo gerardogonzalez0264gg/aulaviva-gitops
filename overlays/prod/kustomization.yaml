@@ -1,0 +1,11 @@
+# Ambiente de produccion (preparado, aun sin desplegar)
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: aulaviva-prod
+resources:
+  - ../../base
+images:
+  - name: ghcr.io/gerardogonzalez0264gg/aulaviva-backend
+    newTag: CAMBIAR-POR-SHA
+  - name: ghcr.io/gerardogonzalez0264gg/aulaviva-ai-service
+    newTag: CAMBIAR-POR-SHA

@@ -1,0 +1,10 @@
+# Ambiente de desarrollo: usa la base y le pone la version de las imagenes
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+images:
+  - name: ghcr.io/gerardogonzalez0264gg/aulaviva-backend
+    newTag: CAMBIAR-POR-SHA
+  - name: ghcr.io/gerardogonzalez0264gg/aulaviva-ai-service
+    newTag: CAMBIAR-POR-SHA

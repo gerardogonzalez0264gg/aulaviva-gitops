@@ -1,0 +1,21 @@
+# Le dice a Argo CD que carpeta de Git vigilar y donde desplegarla
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aulaviva-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/gerardogonzalez0264gg/aulaviva-gitops.git
+    targetRevision: main
+    path: overlays/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: aulaviva
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
