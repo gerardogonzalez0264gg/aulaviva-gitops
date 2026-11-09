@@ -5,6 +5,6 @@ resources:
   - ../../base
 images:
   - name: ghcr.io/gerardogonzalez0264gg/aulaviva-backend
-    newTag: fe2b086ba8c3686ae4a14c336940bff36b036728
+    newTag: 970d8c007b0497a60a5753d338f19241f5218923
   - name: ghcr.io/gerardogonzalez0264gg/aulaviva-ai-service
-    newTag: fe2b086ba8c3686ae4a14c336940bff36b036728
+    newTag: 970d8c007b0497a60a5753d338f19241f5218923
